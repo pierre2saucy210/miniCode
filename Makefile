@@ -1,4 +1,4 @@
-ARCHS = armv6 armv7 arm64
+ARCHS = armv7 arm64
 TARGET_IPHONEOS_DEPLOYMENT_VERSION_armv6 = 5.0
 GO_EASY_ON_ME = 1
 include $(THEOS)/makefiles/common.mk
