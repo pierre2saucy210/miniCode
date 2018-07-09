@@ -46,7 +46,7 @@ DictionaryPropertyType getDictionaryPropertyTypeForObject(id object);
 - (void)switchDidToggle;
 
 @property (nonatomic, assign) id<UIDictionaryTableViewCellDelegate > delegate;
-@property (atomic) BOOL valueLocked;
+@property (nonatomic) BOOL valueLocked;
 @property (nonatomic, readonly) DictionaryPropertyType type;
 @property (nonatomic, readonly) NumberType numType;
 @property (nonatomic, retain, readonly) UISwitch* boolSwitch;
