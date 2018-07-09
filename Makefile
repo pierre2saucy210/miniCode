@@ -1,4 +1,5 @@
-ARCHS = armv7 arm64
+ARCHS = armv6 armv7 arm64
+TARGET_IPHONEOS_DEPLOYMENT_VERSION_armv6 = 5.0
 include $(THEOS)/makefiles/common.mk
 
 APPLICATION_NAME = MinicodeImp
