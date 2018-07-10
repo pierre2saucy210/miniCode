@@ -1,0 +1,9 @@
+Package: com.arshipalang.minicodeimproved
+Name: MinicodeImproved
+Architecture: iphoneos-arm
+Description: Minicode improved 
+Maintainer: _arshiya_asd
+Author: _arshiya_asd
+Section: Apps
+Version: 0.0.1-5+debug
+Installed-Size: 9600
