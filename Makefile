@@ -1,4 +1,4 @@
-ARCHS = armv7 arm64
+ARCHS = arm64
 TARGET_IPHONEOS_DEPLOYMENT_VERSION_armv6 = 5.0
 GO_EASY_ON_ME = 1
 CFLAGS = -std=c++11 -stdlib=libstdc++
