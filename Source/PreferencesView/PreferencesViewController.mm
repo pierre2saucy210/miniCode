@@ -71,12 +71,12 @@
 		showSimpleMessageBox("Error", "Problem occured while saving preferences");
 	}
 	
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)cancelFileExplorer
 {
-	[fileExplorer dismissModalViewControllerAnimated:YES];
+	[fileExplorer dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
@@ -276,7 +276,7 @@
 					UIBarButtonItem* infoButton = [[UIBarImageButtonItem alloc] initWithType:UIButtonTypeInfoLight target:self action:@selector(onSDKInfoButtonSelected)];
 					[fileExplorer.navigationBar.topItem setRightBarButtonItem:infoButton];
 					[infoButton release];
-					[self presentModalViewController:fileExplorer animated:YES];
+					[self presentViewController:fileExplorer animated:YES completion:nil];
 					[fileExplorer release];
 				}
 				[sdkPath release];
@@ -313,7 +313,7 @@
 				UINavigator* navigator = [[UINavigator alloc] initWithRootViewController:appMgr];
 				[navigator.navigationBar setBarStyle:UIBarStyleDefault];
 				[appMgr release];
-				[self.navigationController presentModalViewController:navigator animated:YES];
+				[self.navigationController presentViewController:navigator animated:YES completion:nil];
 				[navigator release];
 			}
 			break;
@@ -371,7 +371,7 @@
 					NSArray *toRecipients = [NSArray arrayWithObjects:@"luisfinke@gmail.com", nil];
 					[mailer setToRecipients:toRecipients];
 					[mailer setMessageBody:@"" isHTML:NO];
-					[self presentModalViewController:mailer animated:YES];
+					[self presentViewController:mailer animated:YES completion:nil];
 					[mailer release];
 				}
 				else
@@ -426,7 +426,7 @@
 - (void)fileBrowser:(UIFileBrowserViewController*)fileBrowser didSelectFolder:(NSString*)folder
 {
 	GlobalPreferences_setDefaultSDK([folder UTF8String]);
-	[fileExplorer dismissModalViewControllerAnimated:YES];
+	[fileExplorer dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)onSDKInfoButtonSelected
@@ -439,7 +439,7 @@
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
-	[controller dismissModalViewControllerAnimated:YES];
+	[controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)dealloc
